@@ -1,0 +1,9 @@
+D:\02-repo\Wol\Wol\bin\Debug\Wol.exe.config
+D:\02-repo\Wol\Wol\bin\Debug\Wol.exe
+D:\02-repo\Wol\Wol\bin\Debug\Wol.pdb
+D:\02-repo\Wol\Wol\obj\Debug\Wol.csprojResolveAssemblyReference.cache
+D:\02-repo\Wol\Wol\obj\Debug\Wol.Properties.Resources.resources
+D:\02-repo\Wol\Wol\obj\Debug\Wol.csproj.GenerateResource.cache
+D:\02-repo\Wol\Wol\obj\Debug\Wol.csproj.CoreCompileInputs.cache
+D:\02-repo\Wol\Wol\obj\Debug\Wol.exe
+D:\02-repo\Wol\Wol\obj\Debug\Wol.pdb
