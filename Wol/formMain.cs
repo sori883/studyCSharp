@@ -52,7 +52,12 @@ namespace Wol
         /// <param name="e"></param>
         private void BtnWake_Click(object sender, EventArgs e)
         {
-            new MagicPacket();
+            DialogResult result = MessageBox.Show("起動しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                new MagicPacket();
+            }
         }
 
         /// <summary>
@@ -62,7 +67,12 @@ namespace Wol
         /// <param name="e"></param>
         private void BtnDown_Click(object sender, EventArgs e)
         {
-            new Down();
+            DialogResult result = MessageBox.Show("シャットダウンしますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                new Down();
+            }
         }
     }
 }

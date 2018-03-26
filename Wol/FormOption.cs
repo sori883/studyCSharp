@@ -29,7 +29,7 @@ namespace Wol
         /// <param name="e"></param>
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("設定を保存しますか？","確認",MessageBoxButtons.YesNo,MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show("設定を保存しますか？","確認",MessageBoxButtons.YesNo,MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.Yes)
             {
