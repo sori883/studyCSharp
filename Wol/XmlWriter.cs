@@ -15,7 +15,7 @@ namespace Wol
         /// コンストラクタ
         /// </summary>
         /// <param name="xmlUrl>書き込むXMLのパス</param>
-        public XmlWriter(string xmlUrl)
+        public XmlWriter()
         {
             doc = new XmlDocument();
         }
@@ -27,11 +27,13 @@ namespace Wol
         /// <param name="downTime">保存するシャットダウンまでの時間</param>
         public void CreateOption(string url, int downTime)
         {
+            //XMLの内容を全て削除
+            DeleteContent(url, "option");
+
             doc.Load(url);
             XmlElement root = doc.DocumentElement;
 
-            //XMLの内容を全て削除
-            DeleteContent(url, "option");
+
 
             XmlElement elemOption = doc.CreateElement("option");
             XmlElement elemDownTime = doc.CreateElement("DownTime");
@@ -55,6 +57,8 @@ namespace Wol
         /// <param name="macs">端末のMAC</param>
         public void CreateEdit(string url, ArrayList names, ArrayList ips, ArrayList macs)
         {
+            DeleteContent(url,"pc");
+
             doc.Load(url);
             XmlElement root = doc.DocumentElement;
 

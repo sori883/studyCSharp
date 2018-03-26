@@ -62,8 +62,7 @@ namespace Wol
         /// <param name="e"></param>
         private void BtnDown_Click(object sender, EventArgs e)
         {
-            new XmlWriter("../../AppSettings.xml");
-            //new Down();
+            new Down();
         }
     }
 }

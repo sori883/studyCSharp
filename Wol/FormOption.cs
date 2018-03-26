@@ -10,6 +10,8 @@ namespace Wol
     {
         //XML書き込みクラス
         XmlReader xmlReader;
+        //XML読み込みクラス
+        XmlWriter xmlWriter;
         //フォーム読み込み時のシャットダウンタイム
         int initDownTime = 0;
 
@@ -27,7 +29,13 @@ namespace Wol
         /// <param name="e"></param>
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("設定を保存しますか？","確認",MessageBoxButtons.YesNo,MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
+            if (result == DialogResult.Yes)
+            {
+                xmlWriter.CreateOption("../../AppSettings.xml", (int)DoDownTime.Value);
+                this.Hide();
+            }
         }
 
         /// <summary>
@@ -37,7 +45,16 @@ namespace Wol
         /// <param name="e"></param>
         private void BtnCancel_Click(object sender, EventArgs e)
         {
+            if (initDownTime != (int)DoDownTime.Value)
+            {
+                DialogResult result = MessageBox.Show("設定が変更されています。\n保存しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
 
+                if (result == DialogResult.Yes)
+                {
+                    xmlWriter.CreateOption("../../AppSettings.xml", (int)DoDownTime.Value);
+                }
+            }
+            this.Hide();
         }
 
         /// <summary>
@@ -51,6 +68,8 @@ namespace Wol
             initDownTime =  Int32.Parse((String)xmlReader.GetContent("DownTime")[0]);
             //シャットダウンタイムの設定値表示
             DoDownTime.Value = initDownTime;
+            //書き込みインスタンス化
+            xmlWriter = new XmlWriter();
         }
     }
 }
