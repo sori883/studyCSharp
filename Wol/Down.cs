@@ -16,7 +16,7 @@ namespace Wol
         public Down()
         {
             //シャットダウンを行うPCのipを設定ファイルから取得
-            XmlReader xmlReader = new XmlReader("../../target.xml");
+            XmlReader xmlReader = new XmlReader("../../Target.xml");
             ips = xmlReader.GetContent("mac");
 
             //シャットダウン処理

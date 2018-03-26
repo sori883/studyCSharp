@@ -1,9 +1,11 @@
 ﻿using System;
-using System.Collections;
 using System.Windows.Forms;
 
 namespace Wol
 {
+    /// <summary>
+    /// メインフォームを形成するクラス
+    /// </summary>
     public partial class FormMain : Form
     {
         public FormMain()
@@ -18,7 +20,8 @@ namespace Wol
         /// <param name="e"></param>
         private void ToolEdit_Click(object sender, EventArgs e)
         {
-
+            FormEdit edit = new FormEdit();
+            edit.ShowDialog();
         }
 
         /// <summary>
@@ -28,7 +31,8 @@ namespace Wol
         /// <param name="e"></param>
         private void ToolOption_Click(object sender, EventArgs e)
         {
-
+            FormOption option = new FormOption();
+            option.ShowDialog();
         }
 
         /// <summary>
@@ -58,7 +62,8 @@ namespace Wol
         /// <param name="e"></param>
         private void BtnDown_Click(object sender, EventArgs e)
         {
-            new Down();
+            new XmlWriter("../../AppSettings.xml");
+            //new Down();
         }
     }
 }

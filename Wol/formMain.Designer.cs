@@ -32,15 +32,16 @@
             this.BtnDown = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.ToolEdit = new System.Windows.Forms.ToolStripLabel();
-            this.ToolOption = new System.Windows.Forms.ToolStripLabel();
-            this.ToolVersion = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolOption = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolVersion = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnWake
             // 
+            this.BtnWake.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnWake.Location = new System.Drawing.Point(13, 39);
             this.BtnWake.Name = "BtnWake";
             this.BtnWake.Size = new System.Drawing.Size(155, 110);
@@ -51,6 +52,7 @@
             // 
             // BtnDown
             // 
+            this.BtnDown.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDown.Location = new System.Drawing.Point(174, 39);
             this.BtnDown.Name = "BtnDown";
             this.BtnDown.Size = new System.Drawing.Size(148, 110);
@@ -80,6 +82,11 @@
             this.ToolEdit.Text = "編集";
             this.ToolEdit.Click += new System.EventHandler(this.ToolEdit_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // ToolOption
             // 
             this.ToolOption.Name = "ToolOption";
@@ -87,22 +94,17 @@
             this.ToolOption.Text = "オプション";
             this.ToolOption.Click += new System.EventHandler(this.ToolOption_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // ToolVersion
             // 
             this.ToolVersion.Name = "ToolVersion";
             this.ToolVersion.Size = new System.Drawing.Size(51, 22);
             this.ToolVersion.Text = "バージョン";
             this.ToolVersion.Click += new System.EventHandler(this.ToolVersion_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // FormMain
             // 
@@ -112,6 +114,10 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.BtnDown);
             this.Controls.Add(this.BtnWake);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

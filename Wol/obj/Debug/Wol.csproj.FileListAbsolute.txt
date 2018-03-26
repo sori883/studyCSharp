@@ -8,3 +8,5 @@ D:\02-repo\Wol\Wol\obj\Debug\Wol.csproj.CoreCompileInputs.cache
 D:\02-repo\Wol\Wol\obj\Debug\Wol.exe
 D:\02-repo\Wol\Wol\obj\Debug\Wol.pdb
 D:\02-repo\Wol\Wol\obj\Debug\Wol.formMain.resources
+D:\02-repo\Wol\Wol\obj\Debug\Wol.FormOption.resources
+D:\02-repo\Wol\Wol\obj\Debug\Wol.FormEdit.resources

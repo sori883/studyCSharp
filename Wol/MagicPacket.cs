@@ -22,7 +22,7 @@ namespace Wol
         public MagicPacket()
         {
             //macを取得する
-            XmlReader xmlReader = new XmlReader("../../target.xml");
+            XmlReader xmlReader = new XmlReader("../../Target.xml");
             macs = xmlReader.GetContent("mac");
 
             //変換したMAC
