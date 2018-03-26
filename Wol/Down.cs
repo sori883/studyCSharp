@@ -1,14 +1,13 @@
 ﻿
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Wol
 {
+    /// <summary>
+    /// 一括でシャットダウンを行う
+    /// </summary>
     class Down
     {
         //シャットダウン先を決めるIP
@@ -16,15 +15,23 @@ namespace Wol
 
         public Down()
         {
-            //ipを取得する処理
+            //シャットダウンを行うPCのipを設定ファイルから取得
+            XmlReader xmlReader = new XmlReader("../../target.xml");
+            ips = xmlReader.GetContent("mac");
+
+            //シャットダウン処理
+            Shutdown();
         }
 
+        /// <summary>
+        /// シャットダウンコマンドを実行する
+        /// </summary>
         public void Shutdown()
         {
             try
             {
                 ProcessStartInfo psi = new ProcessStartInfo();
-                psi.CreateNoWindow = true;
+                psi.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                 psi.FileName = "shutdown.exe";
 
                 for(int i = 0; i < ips.Count; i++)

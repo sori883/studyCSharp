@@ -21,10 +21,16 @@ namespace Wol
 
         public MagicPacket()
         {
-            //マックを取得する処理
+            //macを取得する
+            XmlReader xmlReader = new XmlReader("../../target.xml");
+            macs = xmlReader.GetContent("mac");
 
+            //変換したMAC
             byte[] phy;
+            //マジックパケット
             byte[] packet;
+            
+            //変換から送信処理理繰り返し
             for (int i = 0; i < macs.Count; i++)
             {
                 phy = ParseMac((String)macs[i]);

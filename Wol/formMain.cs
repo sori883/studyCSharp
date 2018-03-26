@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 using System.Windows.Forms;
 
 namespace Wol
@@ -17,11 +11,21 @@ namespace Wol
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 編集クリック
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToolEdit_Click(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// オプションクリック
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToolOption_Click(object sender, EventArgs e)
         {
 
@@ -37,14 +41,24 @@ namespace Wol
             MessageBox.Show("バージョン 1.0.0 \r\n https://sori883.com", "バージョン情報",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// 起動ボタン押下
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnWake_Click(object sender, EventArgs e)
         {
-
+            new MagicPacket();
         }
 
+        /// <summary>
+        /// シャットダウンボタン押下
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnDown_Click(object sender, EventArgs e)
         {
-
+            new Down();
         }
     }
 }
