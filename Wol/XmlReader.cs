@@ -10,8 +10,7 @@ namespace Wol
     class XmlReader
     {
         XmlDocument doc = new XmlDocument();
-        //XMLから取得した結果を格納する変数
-        ArrayList result = new ArrayList();
+
 
         /// <summary>
         /// コンストラクタ
@@ -30,6 +29,9 @@ namespace Wol
         /// <returns>取得した内容</returns>
         public ArrayList GetContent(String nodeName)
         {
+            //XMLから取得した結果を格納する
+            ArrayList result = new ArrayList();
+
             //root要素を取得
             XmlElement root = doc.DocumentElement;
             //内容を取得する要素
@@ -43,8 +45,10 @@ namespace Wol
                     result.Add(node.Item(i).InnerText);
                 }
             }
+
             //結果返却
             return result;
+
         }
     }
 }

@@ -10,3 +10,4 @@ D:\02-repo\Wol\Wol\obj\Debug\Wol.pdb
 D:\02-repo\Wol\Wol\obj\Debug\Wol.formMain.resources
 D:\02-repo\Wol\Wol\obj\Debug\Wol.FormOption.resources
 D:\02-repo\Wol\Wol\obj\Debug\Wol.FormEdit.resources
+D:\02-repo\Wol\Wol\obj\Debug\Wol.ProgressBar.resources

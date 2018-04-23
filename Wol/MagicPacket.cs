@@ -3,6 +3,7 @@ using System.Collections;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Windows.Forms;
 
 namespace Wol
 {
@@ -25,17 +26,24 @@ namespace Wol
             XmlReader xmlReader = new XmlReader("../../Target.xml");
             macs = xmlReader.GetContent("mac");
 
-            //変換したMAC
-            byte[] phy;
-            //マジックパケット
-            byte[] packet;
-            
-            //変換から送信処理理繰り返し
-            for (int i = 0; i < macs.Count; i++)
+            if (macs.Count != 0)
             {
-                phy = ParseMac((String)macs[i]);
-                packet = CreateMagicPacket(phy);
-                SendMagicPacket(packet);
+                //変換したMAC
+                byte[] phy;
+                //マジックパケット
+                byte[] packet;
+
+                //変換から送信処理理繰り返し
+                for (int i = 0; i < macs.Count; i++)
+                {
+                    phy = ParseMac((String)macs[i]);
+                    packet = CreateMagicPacket(phy);
+                    SendMagicPacket(packet);
+                }
+            }
+            else
+            {
+                MessageBox.Show("編集からPC情報を登録してください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

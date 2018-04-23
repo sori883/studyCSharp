@@ -19,7 +19,7 @@ namespace Wol
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ToolEdit_Click(object sender, EventArgs e)
-        {
+         {
             FormEdit edit = new FormEdit();
             edit.ShowDialog();
         }
@@ -57,6 +57,11 @@ namespace Wol
             if (result == DialogResult.Yes)
             {
                 new MagicPacket();
+                ProgressBar progress = new ProgressBar();
+                progress.Up(sender, e);
+                progress.ShowDialog();
+
+                MessageBox.Show("起動処理を実行しました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -72,6 +77,11 @@ namespace Wol
             if (result == DialogResult.Yes)
             {
                 new Down();
+                ProgressBar progress = new ProgressBar();
+                progress.DownTimer();
+                progress.ShowDialog();
+                
+                MessageBox.Show("シャットダウン処理を実行しました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

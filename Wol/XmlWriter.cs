@@ -57,13 +57,12 @@ namespace Wol
         /// <param name="macs">端末のMAC</param>
         public void CreateEdit(string url, ArrayList names, ArrayList ips, ArrayList macs)
         {
-            DeleteContent(url,"pc");
+
+            //XMLの内容を全て削除
+            DeleteContent(url, "pc");
 
             doc.Load(url);
             XmlElement root = doc.DocumentElement;
-
-            //XMLの内容を全て削除
-            DeleteContent(url ,"pc");
 
             XmlElement elemPc = doc.CreateElement("pc");
             XmlElement elemName = doc.CreateElement("name");

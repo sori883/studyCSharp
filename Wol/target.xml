@@ -1,13 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <pc>
-    <name>端末</name>
-    <ip>10.10.10.10</ip>
-    <mac>70-85-C2-33-51-A2</mac>
-  </pc>
-  <pc>
-    <name>端末</name>
-    <ip>10.10.10.10</ip>
+    <name>hohoaaaa</name>
+    <ip>192.168.11.200</ip>
     <mac>70-85-C2-33-51-A2</mac>
   </pc>
 </root>

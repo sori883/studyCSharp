@@ -39,7 +39,7 @@
             // BtnCancel
             // 
             this.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCancel.Location = new System.Drawing.Point(185, 135);
+            this.BtnCancel.Location = new System.Drawing.Point(264, 135);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(74, 28);
             this.BtnCancel.TabIndex = 0;
@@ -50,7 +50,7 @@
             // BtnSave
             // 
             this.BtnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSave.Location = new System.Drawing.Point(265, 135);
+            this.BtnSave.Location = new System.Drawing.Point(183, 135);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(74, 28);
             this.BtnSave.TabIndex = 1;

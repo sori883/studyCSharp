@@ -34,6 +34,7 @@ namespace Wol
             if (result == DialogResult.Yes)
             {
                 xmlWriter.CreateOption("../../AppSettings.xml", (int)DoDownTime.Value);
+                MessageBox.Show("設定を保存しました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
             }
         }
@@ -52,6 +53,7 @@ namespace Wol
                 if (result == DialogResult.Yes)
                 {
                     xmlWriter.CreateOption("../../AppSettings.xml", (int)DoDownTime.Value);
+                    MessageBox.Show("設定を保存しました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             this.Hide();
