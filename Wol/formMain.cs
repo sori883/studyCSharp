@@ -56,13 +56,21 @@ namespace Wol
 
             if (result == DialogResult.Yes)
             {
-                new MagicPacket();
-                //プログレスバーで進捗状況を表示
-                ProgressBar progress = new ProgressBar();
-                progress.UpTimer();
-                progress.ShowDialog();
-                //処理終了後にダイアログで通知
-                MessageBox.Show("起動処理を実行しました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MagicPacket mp = new MagicPacket();
+
+                if (mp.GetIsPc())
+                {
+                    //プログレスバーで進捗状況を表示
+                    ProgressBar progress = new ProgressBar();
+                    progress.UpTimer();
+                    progress.ShowDialog();
+                    //処理終了後にダイアログで通知
+                    MessageBox.Show("起動処理を実行しました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("編集からPC情報を登録してください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -77,13 +85,20 @@ namespace Wol
 
             if (result == DialogResult.Yes)
             {
-                new Down();
-                //プログレスバーで進捗状況を表示
-                ProgressBar progress = new ProgressBar();
+                Down down = new Down();
+                if (down.GetIsPc())
+                {
+                    //プログレスバーで進捗状況を表示
+                    ProgressBar progress = new ProgressBar();
                 progress.DownTimer();
                 progress.ShowDialog();
                 //処理終了後にダイアログで通知
                 MessageBox.Show("シャットダウン処理を実行しました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("編集からPC情報を登録してください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

@@ -13,7 +13,20 @@ namespace Wol
     {
         //シャットダウン先を決めるIP
         ArrayList ips = new ArrayList();
+        //シャットダウンまでの秒数
         ArrayList option = new ArrayList();
+
+        //PC情報が登録されているか
+        bool isPc = true;
+
+        /// <summary>
+        /// isPcを外に渡す処理
+        /// </summary>
+        /// <returns>isPc</returns>
+        public bool GetIsPc()
+        {
+            return isPc;
+        }
 
         public Down()
         {
@@ -34,8 +47,8 @@ namespace Wol
             }
             else
             {
-                //PC情報が登録されていない場合
-                MessageBox.Show("編集からPC情報を登録してください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //pc情報がない判定にする
+                isPc = false;
             }
 
 

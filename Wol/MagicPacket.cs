@@ -20,6 +20,18 @@ namespace Wol
         //マックアドレス
         ArrayList macs = new ArrayList();
 
+        //PC情報が登録されているか
+        bool isPc = true;
+        
+        /// <summary>
+        /// isPcを外に渡す処理
+        /// </summary>
+        /// <returns>isPc</returns>
+        public bool GetIsPc()
+        {
+            return isPc;
+        }
+
         public MagicPacket()
         {
             //macを取得する
@@ -43,7 +55,8 @@ namespace Wol
             }
             else
             {
-                MessageBox.Show("編集からPC情報を登録してください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //pc情報がない判定にする
+                isPc = false;
             }
         }
 
