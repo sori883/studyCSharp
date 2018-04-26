@@ -17,10 +17,11 @@ namespace Wol
 
         public Down()
         {
-            //シャットダウンを行うPCのipを設定ファイルから取得
+            //シャットダウンを行うPCのipを取得
             XmlReader xmlTarget = new XmlReader("../../Target.xml");
             ips = xmlTarget.GetContent("ip");
 
+            //シャットダウンまでの時間を取得
             XmlReader xmlOption = new XmlReader("../../AppSettings.xml");
             option = xmlOption.GetContent("DownTime");
 
@@ -28,10 +29,12 @@ namespace Wol
             //シャットダウン処理
             if (ips.Count != 0)
             {
+                //シャットダウン処理
                 Shutdown();
             }
             else
             {
+                //PC情報が登録されていない場合
                 MessageBox.Show("編集からPC情報を登録してください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -51,7 +54,7 @@ namespace Wol
 
                 for(int i = 0; i < ips.Count; i++)
                 {
-                    psi.Arguments = "-s -t 5 -c \" " + option[0] + "にシャットダウンします。\" -m " + ips[i];
+                    psi.Arguments = "-s -t 5 -c \" " + option[0] + "秒後にシャットダウンします。\" -m " + ips[i];
                     Process p = Process.Start(psi);
                 }
             }

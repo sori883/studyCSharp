@@ -18,7 +18,6 @@ namespace Wol
         public FormOption()
         {
             InitializeComponent();
-            //初期化
             Init();
         }
 

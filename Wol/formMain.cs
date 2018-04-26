@@ -57,10 +57,11 @@ namespace Wol
             if (result == DialogResult.Yes)
             {
                 new MagicPacket();
+                //プログレスバーで進捗状況を表示
                 ProgressBar progress = new ProgressBar();
-                progress.Up(sender, e);
+                progress.UpTimer();
                 progress.ShowDialog();
-
+                //処理終了後にダイアログで通知
                 MessageBox.Show("起動処理を実行しました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -77,10 +78,11 @@ namespace Wol
             if (result == DialogResult.Yes)
             {
                 new Down();
+                //プログレスバーで進捗状況を表示
                 ProgressBar progress = new ProgressBar();
                 progress.DownTimer();
                 progress.ShowDialog();
-                
+                //処理終了後にダイアログで通知
                 MessageBox.Show("シャットダウン処理を実行しました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
