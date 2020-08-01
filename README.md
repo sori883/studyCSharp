@@ -1,3 +1,3 @@
 # WakeOnLan
 wake on lan C#
-古の産物
+C#の勉強も含めて作り直し
